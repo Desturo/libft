@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/12 16:53:22 by nschneid          #+#    #+#             */
-/*   Updated: 2025/03/12 16:53:32 by nschneid         ###   ########.fr       */
+/*   Created: 2025/03/13 16:27:45 by nschneid          #+#    #+#             */
+/*   Updated: 2025/03/13 16:35:33 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int	input)
+int	ft_isascii(int input)
 {
-	return(input >= 'A' && input <= 'Z') || (input >=  'a' && input <= 'z');
+	return(input >= 0 && input <= 127);
 }
+

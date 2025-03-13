@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
@@ -10,21 +10,114 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
+#include <stdio.h>
 
-int	ft_isalpha(int input);
+int		ft_isalpha(int input);
+int		ft_isdigit(int input);
+int		ft_isalnum(int input);
+int		ft_isascii(int input);
+int		ft_isprint(int input);
+void	*memset(void *b, int c, size_t len);
+
+void	test_memset()
+
+void	test_isprint()
+{
+	int index;
+
+	printf("Testing: ft_isprint\n");
+
+	index = 0;
+	while(index < 128)
+	{
+		printf("\t%c: ", index);
+		if(ft_isprint(index))
+			printf("yes\n");
+		else
+			printf("no\n");
+		index++;
+	}
+}
+
+void	test_isalpha()
+{
+	int index;
+
+	printf("Testing: ft_isalpha\n");
+
+	index = 0;
+	while(index < 128)
+	{
+		printf("\t%c: ", index);
+		if(ft_isalpha(index))
+			printf("yes\n");
+		else
+			printf("no\n");
+		index++;
+	}
+}
+
+void	test_isdigit()
+{
+	int index;
+
+	printf("Testing: ft_isdigit\n");
+
+	index = 0;
+	while(index < 128)
+	{
+		printf("\t%c: ", index);
+		if(ft_isdigit(index))
+			printf("yes\n");
+		else
+			printf("no\n");
+		index++;
+	}
+}
+
+void	test_isalnum()
+{
+	int index;
+
+	printf("Testing: ft_isalnum\n");
+
+	index = 0;
+	while(index < 128)
+	{
+		printf("\t%c: ", index);
+		if(ft_isalnum(index))
+			printf("yes\n");
+		else
+			printf("no\n");
+		index++;
+	}
+}
+
+void	test_isascii()
+{
+	int index;
+
+	printf("Testing: ft_isascii\n");
+
+	index = 0;
+	while(index < 128)
+	{
+		printf("\t%c: ", index);
+		if(ft_isascii(index))
+			printf("yes\n");
+		else
+			printf("no\n");
+		index++;
+	}
+}
 
 int	main()
 {
-	int output;
-
-	output = ft_isalpha('*');
-	if(output)
-	{
-		write(1, "alpha", 6);
-	} else
-	{
-		write(1, "no", 3);
-	}
-
+	//test_isalpha();
+	//test_isdigit();
+	//test_isalnum();
+	//test_isascii();
+	test_isprint();
 	return (0);
 }
+
