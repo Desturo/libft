@@ -19,7 +19,8 @@ void	*memset(void *b, int c, size_t len)
 
 	while(i < len)
 	{
-		d[i] = (unsigend char)c;
+		((unsigned char *)b)[i] = (unsigned char)c;
 		i++;
 	}
+	return(b);
 }
