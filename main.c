@@ -9,17 +9,11 @@
 /*   Updated: 2025/03/12 16:57:35 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 #include <unistd.h>
 #include <stdio.h>
+#include <string.h>
 
-int		ft_isalpha(int input);
-int		ft_isdigit(int input);
-int		ft_isalnum(int input);
-int		ft_isascii(int input);
-int		ft_isprint(int input);
-void	*memset(void *b, int c, size_t len);
-
-void	test_memset();
 
 void	test_isprint()
 {
@@ -111,6 +105,14 @@ void	test_isascii()
 	}
 }
 
+void	test_memset()
+{
+	char str[10] = "I love 42!";
+	printf("%s\n", str);
+	ft_memset(str, '$', 22);
+	printf("%s\n", str);
+}
+
 int	main()
 {
 	//test_isalpha();
@@ -118,6 +120,7 @@ int	main()
 	//test_isalnum();
 	//test_isascii();
 	//test_isprint();
+	test_memset();
 	return (0);
 }
 
