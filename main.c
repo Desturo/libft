@@ -19,7 +19,7 @@ int		ft_isascii(int input);
 int		ft_isprint(int input);
 void	*memset(void *b, int c, size_t len);
 
-void	test_memset()
+void	test_memset();
 
 void	test_isprint()
 {
@@ -117,7 +117,7 @@ int	main()
 	//test_isdigit();
 	//test_isalnum();
 	//test_isascii();
-	test_isprint();
+	//test_isprint();
 	return (0);
 }
 
