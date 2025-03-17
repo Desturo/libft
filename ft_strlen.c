@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 
-size_t	strlen(char *s)
+size_t	ft_strlen(char *s)
 {
 	size_t	out;
 	out = 0;
