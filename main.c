@@ -9,11 +9,10 @@
 /*   Updated: 2025/03/12 16:57:35 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 #include <unistd.h>
 #include <stdio.h>
-#include <string.h>
 
+#include "libft.h"
 
 void	test_isprint()
 {
