@@ -6,7 +6,7 @@
 #    By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/18 16:32:32 by nschneid          #+#    #+#              #
-#    Updated: 2025/03/19 18:24:44 by nschneid         ###   ########.fr        #
+#    Updated: 2025/03/19 19:11:48 by nschneid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,10 +31,10 @@ $(OBJECTS): %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	-rm -r $(OBJECTS)
+	rm -f $(OBJECTS)
 
 fclean: clean
-	-rm -r $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
