@@ -15,19 +15,21 @@ CC := cc
 CFLAGS := -Wall -Werror -Wextra
 # CFLAGS =: -Wall -Werror -Wextra -fsanitize=address
 
-files := ft_isalpha.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isprint.c \
+FILES := ft_isalpha.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isprint.c \
 		 ft_memset.c ft_strlen.c
+
+OBJECTS := $(FILES:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(files)
-	ar -rcs libft.a $^.o
+$(NAME): $(OBJECTS)
+	ar -rcs libft.a $(OBJECTS)
 
-$(files)
-	$(CC) $(CFLAGS) -c $^ -o $^.o
+$(OBJECTS): %.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -r $(objects)
+	rm -r $(OBJECTS)
 
 fclean: clean
 	rm -r $(NAME)
