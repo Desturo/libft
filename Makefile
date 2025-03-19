@@ -6,7 +6,7 @@
 #    By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/18 16:32:32 by nschneid          #+#    #+#              #
-#    Updated: 2025/03/19 16:44:23 by nschneid         ###   ########.fr        #
+#    Updated: 2025/03/19 16:55:39 by nschneid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CFLAGS := -Wall -Werror -Wextra
 
 FILES := ft_isalpha.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isprint.c \
 		 ft_memset.c ft_strlen.c ft_bzero.c ft_memcpy.c ft_memmove.c \
-		 ft_strlcpy.c ft_strlcat.c ft_toupper.c
+		 ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c
 
 OBJECTS := $(FILES:.c=.o)
 
