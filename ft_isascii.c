@@ -12,8 +12,26 @@
 
 #include "libft.h"
 
-int	ft_isascii(int input)
+int	ft_isascii(int c)
 {
-	return(input >= 0 && input <= 127);
+	return(c >= 0 && c <= 127);
 }
 
+//int	main()
+//{
+//	int index;
+//
+//	printf("Testing: ft_isascii\n");
+//
+//	index = 0;
+//	while(index < 128)
+//	{
+//		printf("\t%c: ", index);
+//		if(ft_isascii(index))
+//			printf("yes\n");
+//		else
+//			printf("no\n");
+//		index++;
+//	}
+//	return (0);
+//}

@@ -12,8 +12,26 @@
 
 #include "libft.h"
 
-int	ft_isalnum(int a)
+int	ft_isalnum(int c)
 {
-	return(ft_isalpha(a) || ft_isdigit(a));
+	return(ft_isalpha(c) || ft_isdigit(c));
 }
 
+//int	main()
+//{
+//	int index;
+//
+//	printf("Testing: ft_isalnum\n");
+//
+//	index = 0;
+//	while(index < 128)
+//	{
+//		printf("\t%c: ", index);
+//		if(ft_isalnum(index))
+//			printf("yes\n");
+//		else
+//			printf("no\n");
+//		index++;
+//	}
+//	return (0);
+//}

@@ -16,3 +16,22 @@ int	ft_isalpha(int	input)
 {
 	return(input >= 'A' && input <= 'Z') || (input >=  'a' && input <= 'z');
 }
+
+//int	main()
+//{
+//	int index;
+//
+//	printf("Testing: ft_isalpha\n");
+//
+//	index = 0;
+//	while(index < 128)
+//	{
+//		printf("\t%c: ", index);
+//		if(ft_isalpha(index))
+//			printf("yes\n");
+//		else
+//			printf("no\n");
+//		index++;
+//	}
+//	return (0);
+//}

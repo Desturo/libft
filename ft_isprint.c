@@ -12,7 +12,26 @@
 
 #include "libft.h"
 
-int	ft_isprint(int a)
+int	ft_isprint(int c)
 {
-	return(a >= ' ' || a <= '~');
+	return(c >= ' ' || c <= '~');
 }
+
+//int main()
+//{
+//	int index;
+//
+//	printf("Testing: ft_isprint\n");
+//
+//	index = 0;
+//	while(index < 128)
+//	{
+//		printf("\t%c: ", index);
+//		if(ft_isprint(index))
+//			printf("yes\n");
+//		else
+//			printf("no\n");
+//		index++;
+//	}
+//	return (0);
+//}

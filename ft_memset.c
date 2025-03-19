@@ -25,3 +25,11 @@ void	*ft_memset(void *b, int c, size_t len)
 	return(b);
 }
 
+//int	main()
+//{
+//	char str[10] = "I love 42!";
+//	printf("%s\n", str);
+//	ft_memset(str, '$', 22);
+//	printf("%s\n", str);
+//	return (0);
+//}
