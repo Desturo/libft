@@ -6,7 +6,7 @@
 /*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 17:49:12 by nschneid          #+#    #+#             */
-/*   Updated: 2025/03/19 17:49:41 by nschneid         ###   ########.fr       */
+/*   Updated: 2025/03/19 18:25:31 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,17 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	
+//	size_t	i;
+//
+//	i = 0;
+//	while (i < n)
+//	{
+//		if (((unsigned char *)s)[i] == (unsigned char)c)
+//			return ();
+//	}
+
+	s = NULL;
+	c = 0;
+	n = 0;
+	return (NULL);
 }
