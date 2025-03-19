@@ -6,7 +6,7 @@
 /*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 16:56:21 by nschneid          #+#    #+#             */
-/*   Updated: 2025/03/19 16:58:53 by nschneid         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:00:02 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int	ft_tolower(int c)
 	return (c);
 }
 
-int	main()
-{
-	printf("%c\n", ft_tolower('G'));
-	return (0);
-}
+//int	main()
+//{
+//	printf("%c\n", ft_tolower('G'));
+//	return (0);
+//}
