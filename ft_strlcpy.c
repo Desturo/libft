@@ -15,11 +15,10 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t srclen;
+	size_t	srclen;
 
 	i = 0;
 	srclen = ft_strlen((char *)src);
-
 	if (dstsize == 0)
 		return (srclen);
 	else if (dstsize == 1)
@@ -37,7 +36,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 }
 
 //#include <string.h>
-//int	main()
+//int	main(void)
 //{
 //	char	dst[20];
 //	char	src[] = "123456789";

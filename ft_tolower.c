@@ -14,14 +14,14 @@
 
 int	ft_tolower(int c)
 {
-	if (c  >= 'A' && c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 	{
 		return (c + ('a' - 'A'));
 	}
 	return (c);
 }
 
-//int	main()
+//int	main(void)
 //{
 //	printf("%c\n", ft_tolower('G'));
 //	return (0);

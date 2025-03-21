@@ -15,14 +15,14 @@
 size_t	ft_strlen(const char *s)
 {
 	size_t	out;
-	out = 0;
 
-	while(s[out])
+	out = 0;
+	while (s[out])
 		out++;
-	return(out);
+	return (out);
 }
 
-//int main()
+// int main()
 //{
 //	char str[] = "Hello, 42!";
 //	printf("%zu\n", ft_strlen(str));

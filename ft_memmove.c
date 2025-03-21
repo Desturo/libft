@@ -14,6 +14,8 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
+	size_t	i;
+
 	if (dst == NULL && src == NULL)
 	{
 		return (dst);
@@ -28,8 +30,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-		size_t i;
-
 		i = 0;
 		while (i < len)
 		{
@@ -40,7 +40,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
-//int	main()
+// int	main(void)
 //{
 //	char src[] = "lorem ipsum dolor sit amet";
 //	char *dest = src + 1;

@@ -15,6 +15,7 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
+
 	i = ft_strlen((char *)s);
 	while (i >= 0)
 	{
@@ -25,7 +26,7 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 
-//int	main()
+// int	main(void)
 //{
 //	char str[] = "12345678950";
 //	char c = 'f';

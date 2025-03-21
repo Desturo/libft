@@ -14,14 +14,14 @@
 
 int	ft_toupper(int c)
 {
-	if (c  >= 'a' && c <= 'z')
+	if (c >= 'a' && c <= 'z')
 	{
 		return (c - ('a' - 'A'));
 	}
 	return (c);
 }
 
-//int	main()
+//int	main(void)
 //{
 //	printf("%c\n", ft_toupper('8'));
 //	return (0);

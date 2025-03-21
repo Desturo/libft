@@ -14,18 +14,18 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t i;
-	i = 0;
+	size_t	i;
 
-	while(i < len)
+	i = 0;
+	while (i < len)
 	{
 		((unsigned char *)b)[i] = (unsigned char)c;
 		i++;
 	}
-	return(b);
+	return (b);
 }
 
-//int	main()
+//int	main(void)
 //{
 //	char str[10] = "I love 42!";
 //	printf("%s\n", str);

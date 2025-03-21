@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-int	ft_isalpha(int	input)
+int	ft_isalpha(int input)
 {
-	return(input >= 'A' && input <= 'Z') || (input >=  'a' && input <= 'z');
+	return ((input >= 'A' && input <= 'Z') || (input >= 'a' && input <= 'z'));
 }
 
-//int	main()
+//int	main(void)
 //{
 //	int index;
 //

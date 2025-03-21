@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	dstlen = ft_strlen(dst);
-	srclen = ft_strlen((char * )src);
+	srclen = ft_strlen((char *)src);
 	i = 0;
 	if (dstsize <= dstlen)
 		return (dstsize + srclen);
@@ -33,7 +33,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 }
 
 //#include <string.h>
-//int	main()
+//int	main(void)
 //{
 //	char	dst[11] = "I love ";
 //	char	src[] = "42!";

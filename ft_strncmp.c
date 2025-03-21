@@ -15,6 +15,7 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
+
 	i = 0;
 	if (n == 0)
 		return (0);
@@ -30,7 +31,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 }
 
 //#include <string.h>
-//int	main()
+//int	main(void)
 //{
 //	char	s1[] = "test1234";
 //	char	s2[] = "test";

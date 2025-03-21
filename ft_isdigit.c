@@ -14,10 +14,10 @@
 
 int	ft_isdigit(int input)
 {
-	return(input >= '0' && input <= '9');
+	return (input >= '0' && input <= '9');
 }
 
-//int	main()
+// int	main(void)
 //{
 //	int index;
 //

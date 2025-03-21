@@ -15,6 +15,7 @@
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
+
 	i = 0;
 	while (s[i])
 	{
@@ -23,11 +24,11 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	if (s[i] == (char)c)
-			return ((char *)(s + i));
+		return ((char *)(s + i));
 	return (NULL);
 }
 
-//int	main()
+//int	main(void)
 //{
 //	char str[] = "teser";
 //	printf("%s\n", ft_strchr(str, 't' + 256));
