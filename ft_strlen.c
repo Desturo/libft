@@ -6,13 +6,13 @@
 /*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 17:33:26 by nschneid          #+#    #+#             */
-/*   Updated: 2025/03/13 17:54:10 by nschneid         ###   ########.fr       */
+/*   Updated: 2025/03/21 11:06:52 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	out;
 	out = 0;

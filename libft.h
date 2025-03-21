@@ -6,7 +6,7 @@
 /*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 15:29:19 by nschneid          #+#    #+#             */
-/*   Updated: 2025/03/21 10:41:26 by nschneid         ###   ########.fr       */
+/*   Updated: 2025/03/21 11:06:23 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 
-size_t	ft_strlen(char *s);
+size_t	ft_strlen(const char *s);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
