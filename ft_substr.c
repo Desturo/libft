@@ -1,42 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/21 15:18:18 by nschneid          #+#    #+#             */
-/*   Updated: 2025/03/21 16:11:46 by nschneid         ###   ########.fr       */
+/*   Created: 2025/03/22 13:23:09 by nschneid          #+#    #+#             */
+/*   Updated: 2025/03/22 14:26:49 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_substr(char *s, unsigned int start, size_t len)
 {
-	int		slen;
 	char	*out;
+	size_t	outlen;
+	size_t	i;
 
-	slen = ft_strlen(s1);
-	out = ft_calloc(slen + 1, sizeof(char));
+	if (ft_strlen(s) <= start)
+		return (ft_calloc(1, 1));
+	s += start;
+	outlen = ft_strlen(s);
+	if (outlen > len)
+		outlen = len;
+	out = ft_calloc(outlen + 1, sizeof(char));
 	if (!out)
 		return (NULL);
-	slen--;
-	while (slen >= 0)
+	i = 0;
+	while (i < outlen)
 	{
-		out[slen] = s1[slen];
-		slen--;
+		out[i] = s[i];
+		i++;
 	}
 	return (out);
 }
 
 //int	main(void)
 //{
-//	char	*str = ft_strdup((char *)"abcde");
-//	//char	*str2;
-//	//str = "test";
-//	// str2 = ft_strdup((char *)"abcde");
-//	printf("%s\n", str);
-//	free(str);
+//	char	*str;
+//	size_t	size;
+//	size_t	start;
+//	char	*out;
+//
+//	str = "01234";
+//	size = 4;
+//	start = 2;
+//	out = ft_substr(str, start, size);
+//	printf("%s\n", out);
+//	free(out);
 //	return (0);
 //}
