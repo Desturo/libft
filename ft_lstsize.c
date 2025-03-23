@@ -6,13 +6,21 @@
 /*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 17:29:29 by nschneid          #+#    #+#             */
-/*   Updated: 2025/03/23 17:30:07 by nschneid         ###   ########.fr       */
+/*   Updated: 2025/03/23 17:42:13 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
+	int	c;
 
+	c = 0;
+	while (lst)
+	{
+		lst = lst->next;
+		c++;
+	}
+	return (c);
 }
