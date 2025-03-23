@@ -12,56 +12,21 @@
 
 #include "libft.h"
 
-int	digc(long *n, int *sign)
-{
-	int		out;
-	long	num;
-
-	num = *n;
-	out = 0;
-	if (*n == 0)
-		return (1);
-	if (*n < 0)
-	{
-		*n *= -1;
-		*sign = -1;
-		out++;
-	}
-	while (num)
-	{
-		num /= 10;
-		out++;
-	}
-	return (out);
-}
-
 void	ft_putnbr_fd(int n, int fd)
 {
-	int		c;
-	char	*out;
-	int		sign;
-	long	nbr;
-
-	nbr = (long)n;
-	sign = 1;
-	c = digc(&nbr, &sign);
-	out = ft_calloc(c + 1, sizeof(char));
-	if (!out)
-		return ;
-	if (sign < 0)
-		out[0] = '-';
-	c--;
-	if (nbr == 0)
+	if (n == -2147483648)
 	{
-		out[0] = '0';
+		write(fd, "-2147483648", 11);
 		return ;
 	}
-	while (nbr)
+	if (n < 0)
 	{
-		out[c--] = (nbr % 10) + '0';
-		nbr /= 10;
+		write(fd, "-", 1);
+		n *= -1;
 	}
-	return ;
+	if (n >= 10)
+		ft_putnbr_fd(n / 10, fd);
+	write(fd, &"0123456789"[n % 10], 1);
 }
 
 //int	main(void)

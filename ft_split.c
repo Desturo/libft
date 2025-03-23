@@ -12,17 +12,15 @@
 
 #include "libft.h"
 
-void	freewords(char **arr)
+void	*freewords(char **arr, int i)
 {
-	int	i;
-
-	i = 0;
-	while (arr[i])
+	while (i >= 0)
 	{
 		free(arr[i]);
-		i++;
+		i--;
 	}
-	free(arr[i]);
+	free(arr);
+	return (NULL);
 }
 
 int	wordlen(const char *s, char c)
@@ -35,28 +33,29 @@ int	wordlen(const char *s, char c)
 	return (out);
 }
 
-void	putwords(char **out, const char *s, char c)
+void	*putwords(char **out, const char *s, char c, int len)
 {
 	int		i;
 	int		j;
 	char	*in;
 
 	i = 0;
-	while (*s)
+	while (i < len)
 	{
 		j = 0;
 		while (*s == c && *s)
 			s++;
 		if (!*s)
-			return ;
+			return (NULL);
 		in = (char *)ft_calloc(wordlen(s, c) + 1, sizeof(char));
 		if (!in)
-			return (freewords(out));
+			return (freewords(out, i));
 		while (*s != c && *s)
 			in[j++] = *s++;
 		in[j] = 0;
 		out[i++] = in;
 	}
+	return (out);
 }
 
 int	wordcount(const char *s, char c)
@@ -83,30 +82,33 @@ char	**ft_split(char const *s, char c)
 	int		len;
 	char	**out;
 
+	if (!*s)
+	{
+		out = (char **)ft_calloc(1, sizeof(void *));
+		if (!out)
+			return (NULL);
+		out[0] = NULL;
+		return (out);
+	}
 	len = wordcount(s, c);
 	out = (char **)ft_calloc(len + 1, sizeof(char *));
 	if (!out)
 		return (NULL);
 	out[len] = NULL;
-	putwords(out, s, c);
+	if (!putwords(out, s, c, len))
+		return (NULL);
 	return (out);
 }
 
 //int	main(void)
 //{
 //	char	sep;
-//	char	*s1;
-//	char	*s2;
-//	char	*s3;
-//	char	*s4;
+//	char	*s;
 //	char	**out;
 //
-//	sep = ' ';
-//	s1 = "  test1     test2 test3   ";
-//	s2 = "      ";
-//	s3 = "test";
-//	s4 = "test";
-//	out = ft_split(s2, sep);
+//	s = "";
+//	sep = 'a';
+//	out = ft_split(s, sep);
 //	if (!out)
 //		return (1);
 //	while (*out)
