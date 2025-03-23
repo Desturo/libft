@@ -6,7 +6,7 @@
 #    By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/18 16:32:32 by nschneid          #+#    #+#              #
-#    Updated: 2025/03/23 16:28:23 by nschneid         ###   ########.fr        #
+#    Updated: 2025/03/23 17:10:30 by nschneid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,9 +22,12 @@ FILES := ft_isalpha.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isprint.c \
 		 ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c \
 		 ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 		 ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
-		 ft_lstnew.c
+
+BONUS_FILES := ft_lstnew.c ft_lstadd_front.c
 
 OBJECTS := $(FILES:.c=.o)
+
+BONUS_OBJECTS := $(BONUS_FILES:.c=.o)
 
 all: $(NAME)
 
@@ -32,6 +35,12 @@ $(NAME): $(OBJECTS)
 	ar -rcs libft.a $(OBJECTS)
 
 $(OBJECTS): %.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+bonus: $(OBJECTS) $(BONUS_OBJECTS)
+	ar -rcs libft.a $(OBJECTS) $(BONUS_OBJECTS)
+
+$(BONUS_OBJECTS): %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
