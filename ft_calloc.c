@@ -17,6 +17,12 @@ void	*ft_calloc(size_t count, size_t size)
 	unsigned char	*arr;
 	size_t			i;
 
+	if (count * size == 0)
+	{
+		arr = malloc(1);
+		arr[0] = 0;
+		return (arr);
+	}
 	arr = malloc(count * size);
 	if (!arr)
 		return (NULL);
