@@ -6,12 +6,14 @@
 /*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 13:47:51 by nschneid          #+#    #+#             */
-/*   Updated: 2025/03/23 13:49:39 by nschneid         ###   ########.fr       */
+/*   Updated: 2025/03/23 13:53:18 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
+	while (*s)
+		write(fd, s++, 1);
 }
