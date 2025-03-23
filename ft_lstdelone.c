@@ -6,7 +6,7 @@
 /*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 18:12:46 by nschneid          #+#    #+#             */
-/*   Updated: 2025/03/23 18:13:52 by nschneid         ###   ########.fr       */
+/*   Updated: 2025/03/23 18:29:25 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (lst == NULL || (*del) == NULL)
+		return ;
+	(*del)(lst->content);
+	free(lst);
 }
