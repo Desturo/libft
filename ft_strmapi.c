@@ -6,14 +6,13 @@
 /*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 12:59:34 by nschneid          #+#    #+#             */
-/*   Updated: 2025/03/23 13:00:07 by nschneid         ###   ########.fr       */
+/*   Updated: 2025/03/23 13:02:53 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-void	ft_strmapi(const char *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
 
 }
