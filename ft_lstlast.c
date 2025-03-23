@@ -6,7 +6,7 @@
 /*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 17:45:40 by nschneid          #+#    #+#             */
-/*   Updated: 2025/03/23 17:53:36 by nschneid         ###   ########.fr       */
+/*   Updated: 2025/03/23 19:37:43 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
+	if (!lst)
+		return (NULL);
 	while (lst)
 	{
 		if (!lst->next)
