@@ -78,7 +78,7 @@ int	wordcount(const char *s, char c)
 	return (out);
 }
 
-char	**ft_split(const char *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		len;
 	char	**out;

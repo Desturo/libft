@@ -23,7 +23,7 @@ size_t	in_set(const char c, const char *set)
 	return (0);
 }
 
-char	*ft_strtrim(const char *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	char	*out;
