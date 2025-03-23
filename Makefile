@@ -6,7 +6,7 @@
 #    By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/18 16:32:32 by nschneid          #+#    #+#              #
-#    Updated: 2025/03/23 13:40:23 by nschneid         ###   ########.fr        #
+#    Updated: 2025/03/23 13:50:36 by nschneid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ FILES := ft_isalpha.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isprint.c \
 		 ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c \
 		 ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c \
 		 ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
-		 ft_putchar_fd.c
+		 ft_putchar_fd.c ft_putstr_fd.c
 
 OBJECTS := $(FILES:.c=.o)
 
