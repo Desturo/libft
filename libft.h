@@ -6,15 +6,15 @@
 /*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 15:29:19 by nschneid          #+#    #+#             */
-/*   Updated: 2025/03/23 11:49:21 by nschneid         ###   ########.fr       */
+/*   Updated: 2025/03/23 12:59:17 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <limits.h>
+# include <stdio.h>
 # include <stdlib.h>
 
 size_t	ft_strlen(const char *s);
@@ -45,5 +45,6 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(const char *s1, char const *set);
 char	**ft_split(const char *s, char c);
 char	*ft_itoa(int n);
+void	ft_strmapi(const char *s, char (*f)(unsigned int, char));
 
 #endif
