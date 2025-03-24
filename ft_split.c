@@ -63,8 +63,6 @@ static int	wordcount(const char *s, char c)
 	int	out;
 
 	out = 0;
-	if (!*s)
-		return (1);
 	while (*s)
 	{
 		while (*s == c && *s)
@@ -82,14 +80,6 @@ char	**ft_split(char const *s, char c)
 	int		len;
 	char	**out;
 
-	if (!*s)
-	{
-		out = (char **)ft_calloc(1, sizeof(void *));
-		if (!out)
-			return (NULL);
-		out[0] = NULL;
-		return (out);
-	}
 	len = wordcount(s, c);
 	out = (char **)ft_calloc(len + 1, sizeof(char *));
 	if (!out)
