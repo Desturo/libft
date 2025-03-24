@@ -13,7 +13,7 @@
 #include "libft.h"
 
 //get amount of digits in number
-int	digc(long *n, int *sign)
+static int	digc(long *n, int *sign)
 {
 	int		out;
 	long	num;

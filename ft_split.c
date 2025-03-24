@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	*freewords(char **arr, int i)
+static void	*freewords(char **arr, int i)
 {
 	while (i >= 0)
 	{
@@ -23,7 +23,7 @@ void	*freewords(char **arr, int i)
 	return (NULL);
 }
 
-int	wordlen(const char *s, char c)
+static int	wordlen(const char *s, char c)
 {
 	int	out;
 
@@ -33,7 +33,7 @@ int	wordlen(const char *s, char c)
 	return (out);
 }
 
-void	*putwords(char **out, const char *s, char c, int len)
+static void	*putwords(char **out, const char *s, char c, int len)
 {
 	int		i;
 	int		j;
@@ -58,7 +58,7 @@ void	*putwords(char **out, const char *s, char c, int len)
 	return (out);
 }
 
-int	wordcount(const char *s, char c)
+static int	wordcount(const char *s, char c)
 {
 	int	out;
 
