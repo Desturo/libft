@@ -26,19 +26,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	last = ft_lstlast(*lst);
 	last->next = new;
 }
-
-//int	main(void)
-//{
-//	t_list	*list;
-//	t_list	*add;
-//
-//	list = NULL; //ft_lstnew(ft_strdup("test"));
-//	add = ft_lstnew(NULL);
-//	ft_lstadd_back(&list, add);
-//	printf("%p\n", add);
-//	printf("%p\n", list->next);
-//	free(list->content);
-//	free(add->content);
-//	free(list);
-//	free(add);
-//}
