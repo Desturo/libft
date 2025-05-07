@@ -30,7 +30,7 @@ char	*ft_strdup(const char *s1)
 	return (out);
 }
 
-//int	main(void)
+// int	main(void)
 //{
 //	char	*str = ft_strdup((char *)"abcde");
 //	//char	*str2;
