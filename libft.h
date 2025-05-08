@@ -6,13 +6,14 @@
 /*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 15:29:19 by nschneid          #+#    #+#             */
-/*   Updated: 2025/03/23 16:32:01 by nschneid         ###   ########.fr       */
+/*   Updated: 2025/05/08 14:08:07 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -53,9 +54,9 @@ char				**ft_split(char const *s, char c);
 char				*ft_itoa(int n);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
-void				ft_putchar_fd(char c, int fd);
-void				ft_putstr_fd(char *s, int fd);
-void				ft_putendl_fd(char *s, int fd);
+int					ft_putchar_fd(char c, int fd);
+int					ft_putstr_fd(char *s, int fd);
+int					ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *new_lst);
@@ -67,5 +68,16 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+int					ft_putunbrbase_fd(unsigned long long nbr, char *base,
+						int fd);
+int					ft_putnbrbase_fd(long long nbr, char *base, int fd);
+int					ft_printf(const char *str, ...);
+
+// ft_printf helper functions
+int					ft_printx(int num);
+int					ft_printcapsx(int num);
+int					ft_printp(void *ptr);
+int					ft_printdi(int num);
+int					ft_printu(int num);
 
 #endif

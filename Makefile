@@ -6,7 +6,7 @@
 #    By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/18 16:32:32 by nschneid          #+#    #+#              #
-#    Updated: 2025/03/23 21:14:10 by nschneid         ###   ########.fr        #
+#    Updated: 2025/05/08 14:00:10 by nschneid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ FILES := ft_isalpha.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isprint.c \
 		 ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 		 ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 		 ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
-		 ft_lstmap.c
+		 ft_lstmap.c ft_printf.c ft_printf_conversions.c ft_putnbrbase_fd.c \
+		 ft_putunbrbase_fd.c
 
 OBJECTS := $(FILES:.c=.o)
 
