@@ -6,7 +6,7 @@
 /*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 15:29:19 by nschneid          #+#    #+#             */
-/*   Updated: 2025/05/08 14:08:07 by nschneid         ###   ########.fr       */
+/*   Updated: 2025/05/16 16:04:02 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,12 +72,5 @@ int					ft_putunbrbase_fd(unsigned long long nbr, char *base,
 						int fd);
 int					ft_putnbrbase_fd(long long nbr, char *base, int fd);
 int					ft_printf(const char *str, ...);
-
-// ft_printf helper functions
-int					ft_printx(int num);
-int					ft_printcapsx(int num);
-int					ft_printp(void *ptr);
-int					ft_printdi(int num);
-int					ft_printu(int num);
 
 #endif

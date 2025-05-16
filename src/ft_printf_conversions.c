@@ -6,11 +6,12 @@
 /*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 12:33:35 by nschneid          #+#    #+#             */
-/*   Updated: 2025/05/08 14:00:27 by nschneid         ###   ########.fr       */
+/*   Updated: 2025/05/16 16:04:02 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
+#include "helper.h"
 
 int	ft_printx(int num)
 {

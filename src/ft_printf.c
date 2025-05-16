@@ -6,11 +6,12 @@
 /*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 14:21:54 by nschneid          #+#    #+#             */
-/*   Updated: 2025/05/08 14:08:07 by nschneid         ###   ########.fr       */
+/*   Updated: 2025/05/16 16:04:02 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
+#include "helper.h"
 
 static int	convert(const char **str, va_list args);
 
