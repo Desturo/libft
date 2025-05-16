@@ -12,8 +12,14 @@
 
 NAME := libft.a
 CC := cc
-CFLAGS := -Wall -Werror -Wextra
 # CFLAGS =: -Wall -Werror -Wextra -fsanitize=address
+
+OBJ_DIR := obj
+SRC_DIR := src
+INC_DIR := include
+LIB_DIR := lib
+
+FLAGS := -Wall -Werror -Wextra -I$(INC_DIR)
 
 FILES := ft_isalpha.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isprint.c \
 		 ft_memset.c ft_strlen.c ft_bzero.c ft_memcpy.c ft_memmove.c \
@@ -26,23 +32,25 @@ FILES := ft_isalpha.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isprint.c \
 		 ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
 		 ft_lstmap.c ft_printf.c ft_printf_conversions.c ft_putnbrbase_fd.c \
 		 ft_putunbrbase_fd.c
+OBJECTS := $(patsubst %.c,$(OBJ_DIR)/%.o,$(FILES))
 
-OBJECTS := $(FILES:.c=.o)
 
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	ar -rcs $(NAME) $(OBJECTS)
+	@mkdir -p $(LIB_DIR)
+	ar -rcs $(LIB_DIR)/$@ $^
 
-$(OBJECTS): %.o: %.c
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJECTS)
+	rm -rf $(OBJ_DIR)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -rf $(LIB_DIR)
 
 re: fclean all
 

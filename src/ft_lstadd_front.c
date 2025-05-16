@@ -1,0 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/23 17:09:05 by nschneid          #+#    #+#             */
+/*   Updated: 2025/03/23 17:28:58 by nschneid         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../include/libft.h"
+
+void	ft_lstadd_front(t_list **lst, t_list *new_lst)
+{
+	new_lst->next = *lst;
+	*lst = new_lst;
+}

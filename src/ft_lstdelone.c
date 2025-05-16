@@ -1,0 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/23 18:12:46 by nschneid          #+#    #+#             */
+/*   Updated: 2025/03/23 19:37:37 by nschneid         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../include/libft.h"
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
+{
+	if (lst == NULL || (*del) == NULL)
+		return ;
+	(*del)(lst->content);
+	free(lst);
+}
