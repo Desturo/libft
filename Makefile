@@ -6,7 +6,7 @@
 #    By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/18 16:32:32 by nschneid          #+#    #+#              #
-#    Updated: 2025/05/16 17:54:24 by nschneid         ###   ########.fr        #
+#    Updated: 2025/07/18 14:18:11 by nschneid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ FILES := ft_isalpha.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isprint.c \
 		 ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 		 ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 		 ft_printf.c ft_printf_conversions.c ft_putnbrbase_fd.c \
-		 ft_putunbrbase_fd.c get_next_line.c get_next_line_utils.c
+		 ft_putunbrbase_fd.c get_next_line.c get_next_line_utils.c ft_sqrt.c
 OBJECTS := $(patsubst %.c,$(OBJ_DIR)/%.o,$(FILES))
 
 

@@ -6,7 +6,7 @@
 /*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 15:29:19 by nschneid          #+#    #+#             */
-/*   Updated: 2025/05/16 17:30:45 by nschneid         ###   ########.fr       */
+/*   Updated: 2025/07/18 14:25:21 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,14 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+/**
+ * @brief calculates the nearest whole number to the square root
+ *
+ * @param x The number to calculate the square root of
+ *
+ * @return The nearest whole nuber to the square root
+ */
+int		ft_sqrt(int x);
 size_t	ft_strlen(const char *s);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
