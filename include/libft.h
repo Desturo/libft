@@ -6,7 +6,7 @@
 /*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 15:29:19 by nschneid          #+#    #+#             */
-/*   Updated: 2025/07/18 14:25:21 by nschneid         ###   ########.fr       */
+/*   Updated: 2025/07/19 17:00:39 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,10 @@ int		ft_putunbrbase_fd(unsigned long long nbr, char *base, int fd);
 int		ft_putnbrbase_fd(long long nbr, char *base, int fd);
 int		ft_printf(const char *str, ...);
 char	*get_next_line(int fd);
+
+/**
+ * @brief converts a string to a long long
+ */
+long long	ft_atoll(const char *str);
 
 #endif
