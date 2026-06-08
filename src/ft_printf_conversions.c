@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_conversions.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nschneid <nschneid@student.42heilbronn.de  +#+  +:+       +#+        */
+/*   By: nschneid <nschneid@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 12:33:35 by nschneid          #+#    #+#             */
-/*   Updated: 2025/05/16 16:04:02 by nschneid         ###   ########.fr       */
+/*   Updated: 2026/06/08 17:24:50 by nschneid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 #include "helper.h"
+#include <stdint.h>
 
 int	ft_printx(int num)
 {
